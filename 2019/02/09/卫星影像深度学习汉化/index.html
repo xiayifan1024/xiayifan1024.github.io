@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>卫星影像深度学习汉化 | Xia Yifan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="关于汉化工作译者英语水平有限，且为深度学习入门者。初次翻译，依赖机翻。因此可能存在部分名词翻译不准确，语言不流畅，逻辑矛盾等问题，原工程satellite-image-deep-learning，欢迎与我交流指正。希望通过翻译本文，能让更多的遥感工作者对当前的对于卫星影像的深度学习方法有所了解认识，共同学习进步。文章原作若有更新本文会同步更新。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="卫星影像深度学习汉化">
+<meta property="og:url" content="http://yoursite.com/2019/02/09/%E5%8D%AB%E6%98%9F%E5%BD%B1%E5%83%8F%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%B1%89%E5%8C%96/index.html">
+<meta property="og:site_name" content="Xia Yifan">
+<meta property="og:description" content="关于汉化工作译者英语水平有限，且为深度学习入门者。初次翻译，依赖机翻。因此可能存在部分名词翻译不准确，语言不流畅，逻辑矛盾等问题，原工程satellite-image-deep-learning，欢迎与我交流指正。希望通过翻译本文，能让更多的遥感工作者对当前的对于卫星影像的深度学习方法有所了解认识，共同学习进步。文章原作若有更新本文会同步更新。">
+<meta property="article:published_time" content="2019-02-09T10:00:48.000Z">
+<meta property="article:modified_time" content="2019-02-09T10:43:21.000Z">
+<meta property="article:author" content="Xia Yifan">
+<meta property="article:tag" content="DL">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Xia Yifan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Xia Yifan</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">RemoteSensing Deepleaarn Graduate IN AIRCAS</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-卫星影像深度学习汉化" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/09/%E5%8D%AB%E6%98%9F%E5%BD%B1%E5%83%8F%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%B1%89%E5%8C%96/" class="article-date">
+  <time datetime="2019-02-09T10:00:48.000Z" itemprop="datePublished">2019-02-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      卫星影像深度学习汉化
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="关于汉化工作"><a href="#关于汉化工作" class="headerlink" title="关于汉化工作"></a>关于汉化工作</h1><p>译者英语水平有限，且为深度学习入门者。初次翻译，依赖机翻。因此可能存在部分名词翻译不准确，语言不流畅，逻辑矛盾等问题，原工程<a href="https://github.com/robmarkcole/satellite-image-deep-learning" target="_blank" rel="noopener" title="satellite-image-deep-learning">satellite-image-deep-learning</a>，欢迎与我交流指正。希望通过翻译本文，能让更多的遥感工作者对当前的对于卫星影像的深度学习方法有所了解认识，共同学习进步。文章原作若有更新本文会同步更新。</p>
+<a id="more"></a>
+<h1 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h1><p>本文档主要列出了在卫星图像上执行深度学习（DL）的资源。并在尽可能小的范围内讨论机器学习（ML，例如随机森林，随机梯度下降）方法，以及经典图像处理技术。</p>
+<h1 id="热门链接"><a href="#热门链接" class="headerlink" title="热门链接"></a>热门链接</h1><ul>
+<li><a href="https://github.com/chrieke/awesome-satellite-imagery-datasets" target="_blank" rel="noopener">awesome-satellite-imagery-datasets</a></li>
+<li><a href="https://gist.github.com/jacquestardie/0d1c0cb413b3b9b06edf" target="_blank" rel="noopener">A modern geospatial workflow</a></li>
+<li><a href="https://github.com/deepVector/geospatial-machine-learning" target="_blank" rel="noopener">geospatial-machine-learning</a></li>
+<li><a href="https://www.satimagingcorp.com/satellite-sensors/" target="_blank" rel="noopener">Long list of satellite missions with example imagery</a></li>
+<li><a href="https://registry.opendata.aws/" target="_blank" rel="noopener">AWS datasets</a><h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1></li>
+<li><a href="https://github.com/robmarkcole/satellite-image-deep-learning#datasets" target="_blank" rel="noopener">数据集</a></li>
+<li><a href="https://github.com/robmarkcole/satellite-image-deep-learning#online-computing-resources" target="_blank" rel="noopener">在线计算资源</a></li>
+<li><a href="https://github.com/robmarkcole/satellite-image-deep-learning#interesting-dl-projects" target="_blank" rel="noopener">深度学习工程</a></li>
+<li><a href="https://github.com/robmarkcole/satellite-image-deep-learning#production" target="_blank" rel="noopener">生产</a></li>
+<li><a href="https://github.com/robmarkcole/satellite-image-deep-learning#image-formats--catalogues" target="_blank" rel="noopener">图像格式及目录</a></li>
+<li><a href="https://github.com/robmarkcole/satellite-image-deep-learning#state-of-the-art" target="_blank" rel="noopener">技术发展水平</a></li>
+<li><a href="https://github.com/robmarkcole/satellite-image-deep-learning#online-platforms-for-geo-analysis" target="_blank" rel="noopener">在线地理分析平台</a></li>
+<li><a href="https://github.com/robmarkcole/satellite-image-deep-learning#techniques" target="_blank" rel="noopener">技术</a></li>
+<li><a href="https://github.com/robmarkcole/satellite-image-deep-learning#useful-references" target="_blank" rel="noopener">参考</a><h2 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h2></li>
+<li><strong>注意</strong> 卫星图像文件可能会非常大，有些即使是小的数据集也可能包括50GB的图像。</li>
+<li><a href="https://www.maptiler.com/gallery/satellite/" target="_blank" rel="noopener">Various datasets listed here</a> </li>
+<li><a href="https://github.com/chrieke/awesome-satellite-imagery-datasets" target="_blank" rel="noopener">awesome-satellite-imagery-datasets</a><br>###</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/02/09/%E5%8D%AB%E6%98%9F%E5%BD%B1%E5%83%8F%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%B1%89%E5%8C%96/" data-id="ckbdoa8kk0003jyugbgsc37yn" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DL/" rel="tag">DL</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/01/05/Hexo-GithubPage%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo+GithubPage搭建个人博客时踩过的坑</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/" rel="tag">DL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/DL/" style="font-size: 10px;">DL</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/02/09/%E5%8D%AB%E6%98%9F%E5%BD%B1%E5%83%8F%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%B1%89%E5%8C%96/">卫星影像深度学习汉化</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/05/Hexo-GithubPage%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/">Hexo+GithubPage搭建个人博客时踩过的坑</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Xia Yifan<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo+GithubPage搭建个人博客时踩过的坑 | Xia Yifan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="0x000 前言 搭建博客初衷很久之前想正经的写点什么，还记得在QQ空间写过文章，但总是不尽如人意。后来网上冲浪博客盛行，我也申请个新浪账号写过一段时间的博客，但是样式、广告之类的总感觉我的博客不是我的（控制欲hhh），自己建站又没钱没本事。就这样到了大学干过一年多的微信推送新媒体之后，我又开始打起了写博客的主意。正好有一天看到了Hexo+GithubPage建立博客的文章，让我有了一些想法。 写">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+GithubPage搭建个人博客时踩过的坑">
+<meta property="og:url" content="http://yoursite.com/2019/01/05/Hexo-GithubPage%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/index.html">
+<meta property="og:site_name" content="Xia Yifan">
+<meta property="og:description" content="0x000 前言 搭建博客初衷很久之前想正经的写点什么，还记得在QQ空间写过文章，但总是不尽如人意。后来网上冲浪博客盛行，我也申请个新浪账号写过一段时间的博客，但是样式、广告之类的总感觉我的博客不是我的（控制欲hhh），自己建站又没钱没本事。就这样到了大学干过一年多的微信推送新媒体之后，我又开始打起了写博客的主意。正好有一天看到了Hexo+GithubPage建立博客的文章，让我有了一些想法。 写">
+<meta property="article:published_time" content="2019-01-05T09:14:42.000Z">
+<meta property="article:modified_time" content="2019-01-05T13:37:26.000Z">
+<meta property="article:author" content="Xia Yifan">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Xia Yifan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Xia Yifan</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">RemoteSensing Deepleaarn Graduate IN AIRCAS</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Hexo-GithubPage搭建个人博客时踩过的坑" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/05/Hexo-GithubPage%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" class="article-date">
+  <time datetime="2019-01-05T09:14:42.000Z" itemprop="datePublished">2019-01-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo+GithubPage搭建个人博客时踩过的坑
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="0x000-前言-搭建博客初衷"><a href="#0x000-前言-搭建博客初衷" class="headerlink" title="0x000 前言 搭建博客初衷"></a>0x000 前言 搭建博客初衷</h1><p>很久之前想正经的写点什么，还记得在QQ空间写过文章，但总是不尽如人意。后来网上冲浪博客盛行，我也申请个新浪账号写过一段时间的博客，但是样式、广告之类的总感觉我的博客不是我的（控制欲hhh），自己建站又没钱没本事。就这样到了大学干过一年多的微信推送新媒体之后，我又开始打起了写博客的主意。正好有一天看到了Hexo+GithubPage建立博客的文章，让我有了一些想法。</p>
+<p>写博客的意义是什么？我一直认为只有两件事：记录、分享。而微博、微信等社交平台的出现虽然也是能起到记录与分享的作用，但是对于一些深入的思考分析总是不够尽如人意。代码也好数学公式也好个人思考也好，放在那几英寸的屏幕上总是感觉累，于是就还是考虑用博客吧。</p>
+<p>毕竟我也不是大牛，以现在的水平写出来的东西也过于简单与重复，很难起到分享知识的作用，与其说是博客，倒不如说是一些笔记之类的，记录一下自己的学习历程之类的，写一些方法与感想。乐呵乐呵。而且也算是通过写博客加强一下对知识的记忆吧。</p>
+<a id="more"></a>
+
+<h1 id="0x001-搭建博客"><a href="#0x001-搭建博客" class="headerlink" title="0x001 搭建博客"></a>0x001 搭建博客</h1><p>通过搭建博客你可以学会：Hexo的使用、MarkDown的使用、Git的简单使用等。<br>对于Hexo的原理推荐一下文章:<a href="http://coderunthings.com/2017/08/20/howhexoworks/" target="_blank" rel="noopener">Zhao Biao:hexo是怎么工作的</a></p>
+<h2 id="前期搭建"><a href="#前期搭建" class="headerlink" title="前期搭建"></a>前期搭建</h2><p>Hexo+GitHubpage建立个人主页的文章网上有很多，实际方法不多赘述，利用Hexo的官方文档以及一些大牛的搭建教程：</p>
+<p>Hexo中文文档：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener" title="Hexo中文文档">https://hexo.io/zh-cn/docs/</a>（此文档不括前期Node.js和Git安装与配置）</p>
+<p>没有 NOde.js 和 Git 使用经历的可以通过百度自行搜寻安装方法以下是我主要参考的两位博主的方法，可以结合使用。</p>
+<p>遇见西门：<a href="https://www.simon96.online/2018/10/12/hexo-tutorial/" target="_blank" rel="noopener">【持续更新】最全Hexo博客搭建+主题优化+插件配置+常用操作+错误分析</a>（从开始到搭建完成都讲的十分详细，推荐）</p>
+<p>Trista222:<a href="https://www.cnblogs.com/trista222/p/8017300.html" target="_blank" rel="noopener">结合hexo在GitHub上搭建个人博客——全过程</a>（SSH授权讲的比较详细）</p>
+<p>当然这也可以参照官方文档</p>
+<p><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener">git文档</a></p>
+<h2 id="主题优化"><a href="#主题优化" class="headerlink" title="主题优化"></a>主题优化</h2><p>对于主题的选择<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官方主题页</a>有不少，可以进行选择。我目前使用的是 Next 主题，比较傻瓜化而且网上修改教程也多可以推荐没有前端经验的使用。</p>
+<p>无论用什么主题也好，请务必阅读该主题的在GitHub上 ReadMe 便于使用和改进。还有在出现问题的时候可以查询 Issue ，有问题的可能不止你一个。</p>
+<h2 id="关于-MarkDown"><a href="#关于-MarkDown" class="headerlink" title="关于 MarkDown"></a>关于 MarkDown</h2><p>MarkDown的教程：网上一搜一大把。  <a href="https://www.jianshu.com/p/335db5716248" target="_blank" rel="noopener">欧阳锋:最完整的Markdown基础教程</a></p>
+<p>本地客户端可以使用MarkDownPad2（比较傻瓜）、Atom（神器，但是配置有碍于国内网络问题一些配置会较为麻烦）。</p>
+<p>MDP2安装及破解：<a href="https://blog.csdn.net/sinat_41805381/article/details/79479697" target="_blank" rel="noopener">张琪Andrea-E:从零开始Markdown——安装MarkdownPad2【已安装完毕 内含注册码】【继续剧透：CSDN就可以直接编啊！！！下毛线！！！】【我也很无奈啊】</a>(注意文末注册码链接以及HTML处理方法)</p>
+<p>Atom配置：<a href="https://blog.csdn.net/u011583927/article/details/78858368" target="_blank" rel="noopener">随煜而安：使用Atom快速打造好用的Markdown编辑器</a></p>
+<p>线上：</p>
+<p>Hexo官方管理器：<br>在git中安装hexo-admin<br>    <code>$ npm i hexo-admin --save</code><br>在之后键入命令<br><code>hexo s
+http://localhost:4001/admin/</code><br>可直接利用hexo内置的makedown进行编辑管理</p>
+<p>简书、csdn、<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="noopener">cmd Markdown</a>等也都可以进行线上编辑</p>
+<h1 id="0x002-出现的问题及注意"><a href="#0x002-出现的问题及注意" class="headerlink" title="0x002 出现的问题及注意"></a>0x002 出现的问题及注意</h1><p>因为是建站好久才写，所以其中辛苦忘了好多，想起多少写多少吧  </p>
+<p>0、注意Git与Nodejs的版本，Hexo对两者有一定的版本支持<br>1、在博客根目录下执行Git Bash<br>2、博客网址中必须使用你github的用户名，即某用户的用户名为ClearLove7，那么网址必须为ClearLove7.github.io<br>3、Hexo对空格<strong>特别敏感</strong>，在配置中请务必注意空格问题，如在<code>tag: Hexo</code>中冒号后存在空格。在配置文件及文章中忽视此问题可能会导致页面错误、文章无法上传、格式错误等错误。<br>4、Next6可能会存在 PageBuildFailure 的问题。考虑主题配置文件中的 ‘override’ 改成 ‘ture’。<br>5、注意文件路径，如头像图片为在’F:\blog\source\assets\img\xxx.jpg’其中 ‘blog’ 为根目录，则在配置头像图片时注意为’/assets/img/xxx.jpg’</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/05/Hexo-GithubPage%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" data-id="ckbdoa8k70000jyug67ae285o" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/02/09/%E5%8D%AB%E6%98%9F%E5%BD%B1%E5%83%8F%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%B1%89%E5%8C%96/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          卫星影像深度学习汉化
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/" rel="tag">DL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/DL/" style="font-size: 10px;">DL</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/02/09/%E5%8D%AB%E6%98%9F%E5%BD%B1%E5%83%8F%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%B1%89%E5%8C%96/">卫星影像深度学习汉化</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/05/Hexo-GithubPage%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%97%B6%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/">Hexo+GithubPage搭建个人博客时踩过的坑</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Xia Yifan<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
