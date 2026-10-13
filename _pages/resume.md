@@ -11,7 +11,7 @@ translation_key: resume
 
 哈尔滨工业大学（深圳） · 电子信息专业博士研究生
 
-[邮箱](mailto:xiayifanol@126.com) · [English]({{ '/' | relative_url }})
+[邮箱](mailto:xiayifanol@126.com) · [GitHub](https://github.com/xiayifan1024) · [English]({{ '/' | relative_url }})
 
 ## 关于我
 

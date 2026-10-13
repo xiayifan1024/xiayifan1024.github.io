@@ -40,3 +40,8 @@ html { scroll-behavior: auto !important; }
 @media (max-width: 600px) {
   .resume-photo { float: none; margin: 0 0 1rem; }
 }
+
+/* 电脑端导航紧随站点名称，整体靠左排列。 */
+@media (min-width: 768px) {
+  .greedy-nav .visible-links { justify-content: flex-start; }
+}

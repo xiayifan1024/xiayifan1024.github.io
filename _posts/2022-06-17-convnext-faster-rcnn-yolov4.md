@@ -3,7 +3,9 @@ title: "ConvNext做Backbone的Faster R-CNN和YOLOV4（结合博主Bubbliiing的T
 date: 2022-06-17
 tags: [空天院, 模型结构]
 render_with_liquid: false
+excerpt: "基于 TensorFlow 2 实现 ConvNeXt，并结合 Bubbliiing 的检测框架，将其作为 YOLOv4 和 Faster R-CNN 的骨干网络。"
 ---
+
 # 参考
 Bubbliiing：[睿智的目标检测45——TF2搭建Faster R-CNN目标检测平台
 ](https://blog.csdn.net/weixin_44791964/article/details/108513563)
@@ -410,7 +412,6 @@ def convnext_classifier_layers(x,
     x = TimeDistributed(GlobalAveragePooling2D(),name='avg_pool')(x)
     
     return x
-
 
 # 查看网络时记得修改
 if __name__ == "__main__":

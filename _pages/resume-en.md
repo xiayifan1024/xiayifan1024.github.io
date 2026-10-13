@@ -17,7 +17,7 @@ description: "Personal résumé, education, experience and selected projects."
 Ph.D. Student in Electronic Information  
 Harbin Institute of Technology, Shenzhen
 
-[Email](mailto:xiayifanol@126.com) · [中文]({{ '/zh/' | relative_url }})
+[Email](mailto:xiayifanol@126.com) · [GitHub](https://github.com/xiayifan1024) · [中文]({{ '/zh/' | relative_url }})
 
 ## About Me
 

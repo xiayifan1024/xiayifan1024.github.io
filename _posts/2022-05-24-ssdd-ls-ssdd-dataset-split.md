@@ -3,6 +3,7 @@ title: "SAR舰船检测数据集SSDD和LS-SSDD的训练集和检测集划分代�
 date: 2022-05-24
 tags: [空天院, 目标检测, 数据处理]
 render_with_liquid: false
+excerpt: "介绍 SSDD 与 LS-SSDD 舰船检测数据集，提供按文件编号划分训练集、验证集和测试集的 Python 代码。"
 ---
 
 # SSDD数据集简介与划分
