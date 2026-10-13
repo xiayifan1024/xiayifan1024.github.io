@@ -6,9 +6,9 @@ render_with_liquid: false
 excerpt: "基于 TensorFlow 2 实现 ConvNeXt，并结合 Bubbliiing 的检测框架，将其作为 YOLOv4 和 Faster R-CNN 的骨干网络。"
 ---
 
-# 参考
-Bubbliiing：[睿智的目标检测45——TF2搭建Faster R-CNN目标检测平台
-](https://blog.csdn.net/weixin_44791964/article/details/108513563)
+## 参考
+
+Bubbliiing：[睿智的目标检测45——TF2搭建Faster R-CNN目标检测平台](https://blog.csdn.net/weixin_44791964/article/details/108513563)
 
 太阳花的小绿豆：[ConvNeXt网络详解](https://blog.csdn.net/qq_37541097/article/details/122556545)
 
@@ -16,14 +16,17 @@ Bubbliiing：[睿智的目标检测45——TF2搭建Faster R-CNN目标检测平�
 
 facebook：[A ConvNet for the 2020s](https://github.com/facebookresearch/ConvNeXt)
 
-# ConvNext 结构
+## ConvNext 结构
+
 ConvNext 结构简单易懂，没有什么新颖的东西，新人可以看着结构图就能写。甚至连类都不用写。
 下图为博主[太阳花的小绿豆](https://blog.csdn.net/qq_37541097/article/details/122556545)做的ConvNext-T( C = (96, 192, 384, 768), B = (3, 3, 9, 3))的结构图，但是我代码中用的ConvNext-B( C = (128, 256, 512, 1024), B = (3, 3, 27, 3))，甚至魔改ConvNext用的还是较多的
 
 ![模型结构](/assets/images/posts/convnext-faster-rcnn-yolov4/1044e640213a9babf6ad71e6000b5ca8.png)
 
-# 代码
-## YOLOV4
+## 代码
+
+### YOLOV4
+
 在修改[bubbliiing的YOLOv4](https://github.com/bubbliiiing/yolov4-tf2)的Backbone时，我去掉了最后的Global Avg Pooling、Layer Norm以及Linear部分。直接输出，如果需要多尺度，输出后三个Stage的结果。借鉴了[FaceBook团队源码](https://github.com/facebookresearch/ConvNeXt)以及[太阳花的小绿豆](https://github.com/WZMIAOMIAO/deep-learning-for-image-processing/blob/master/tensorflow_classification/ConvNeXt/model.py)动态的Dropout，实际影响不大。
 
 ```python
@@ -173,6 +176,7 @@ def ConvNext_Body(inputs,
 
     return feat1, feat2, feat3 # 输出多尺度
 ```
+
 在文件`./nets/yolo.py`中，修改函数`yolo_body`即可
 
 ```python
@@ -180,7 +184,8 @@ def ConvNext_Body(inputs,
 	feat1,feat2,feat3 = ConvNext_Body(inputs)
 ```
 
-## Faster R-CNN
+### Faster R-CNN
+
 在修改[bubbliiing的Faster R-CNN](https://github.com/bubbliiiing/faster-rcnn-tf2)的Backbone时，仿照他对Vgg16和ResNet50的处理方法。将前三个Stage提取特征图，最后一个Stage作为分类层。
 
 ```python

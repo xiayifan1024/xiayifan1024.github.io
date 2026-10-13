@@ -41,7 +41,99 @@ html { scroll-behavior: auto !important; }
   .resume-photo { float: none; margin: 0 0 1rem; }
 }
 
-/* 电脑端导航紧随站点名称，整体靠左排列。 */
-@media (min-width: 768px) {
-  .greedy-nav .visible-links { justify-content: flex-start; }
+
+/* 手机保留顶部导航，最新文章仅在电脑侧栏展示。 */
+.greedy-nav .sidebar-latest { display: none; }
+
+@media (min-width: 1024px) {
+  body { padding-left: 260px; }
+  .masthead {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: 260px;
+    overflow-y: auto;
+    border-bottom: 0;
+    border-right: 1px solid #eee;
+    background: #fff;
+  }
+  .masthead__inner-wrap { padding: 2rem 1.2rem; }
+  .greedy-nav { flex-direction: column; align-items: stretch; }
+  .greedy-nav .site-title { align-self: flex-start; margin: 0 0 1.5rem; }
+  .greedy-nav .visible-links {
+    flex-direction: column;
+    align-items: stretch;
+    flex: none;
+    overflow: visible;
+    width: 100%;
+  }
+  .greedy-nav .visible-links > li { margin-bottom: 1rem; white-space: normal; }
+  .greedy-nav .visible-links a { margin: 0; }
+  .greedy-nav .sidebar-latest {
+    display: block;
+    margin-top: 0.65rem;
+    padding-left: 0.75rem;
+    border-left: 1px solid #ddd;
+  }
+  .greedy-nav .sidebar-latest li { margin-bottom: 0.8rem; }
+  .greedy-nav .sidebar-latest a {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    font-size: 0.7em;
+    line-height: 1.5;
+  }
+  .greedy-nav .sidebar-latest a::before { display: none; }
+  .sidebar-latest time { display: block; margin-top: 0.2rem; color: #777; font-size: 0.6em; }
+  #main { padding-top: 1rem; }
+  #main > .page, #main > .archive { float: none; width: 100%; }
+  #main > .archive, .wide #main > .page { padding-inline-end: 0; }
+}
+
+/* 技术博客固定正文字号，避免主题在大屏上放大至 22px。 */
+body.blog-reading { font-size: 17px; }
+.blog-reading .page__content { line-height: 1.75; overflow-wrap: break-word; }
+.blog-reading .page__title { font-size: 1.6em; line-height: 1.4; }
+.blog-reading .page__content h1 { font-size: 1.5em; }
+.blog-reading .page__content h2 { font-size: 1.3em; margin-top: 1.6em; }
+.blog-reading .page__content h3 { font-size: 1.15em; }
+.blog-reading .page__content pre { font-size: 14px; overflow-x: auto; }
+.blog-reading .page__content pre code { white-space: pre; overflow-wrap: normal; }
+.blog-reading .archive__item-title { font-size: 1.2em; line-height: 1.5; }
+.blog-reading .archive__item-excerpt { font-size: 1em; line-height: 1.7; }
+.blog-reading #main { max-width: 1440px; padding-inline: 24px; }
+
+@media (min-width: 1024px) {
+  body.blog-reading { padding-left: 230px; }
+  .blog-reading .masthead { width: 230px; font-size: 16px; }
+  .blog-reading #main > .page { padding-inline-end: 0; }
+  /* 中等宽度屏幕把目录放在正文上方，避免挤压每行文字。 */
+  .blog-reading .sidebar__right,
+  .blog-reading .sidebar__right.sticky {
+    position: static;
+    float: none;
+    width: 100%;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+    margin-bottom: 1.5em;
+  }
+  .blog-reading .sidebar__right .toc { font-size: 14px; }
+  .blog-reading .sidebar__right.sticky .toc .toc__menu { max-height: 220px; }
+}
+
+@media (min-width: 1400px) {
+  .blog-reading #main > .page { padding-inline-end: 200px; }
+  .blog-reading .sidebar__right,
+  .blog-reading .sidebar__right.sticky {
+    position: sticky;
+    top: 24px;
+    float: right;
+    width: 180px;
+    margin-inline-end: -200px;
+    padding-inline-start: 0;
+  }
+  .blog-reading .sidebar__right.sticky .toc .toc__menu { max-height: calc(100vh - 100px); }
+}
+
+@media (max-width: 600px) {
+  body.blog-reading { font-size: 16px; }
+  .blog-reading #main { padding-inline: 16px; }
 }

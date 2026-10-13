@@ -12,17 +12,17 @@ excerpt: "记录 UniVS 视频分割推理的复现过程，涵盖 CUDA 与依赖
 
 项目介绍：参见 [CVPR 2024 | 视频分割大一统！UniVS：统一通用视频分割](https://zhuanlan.zhihu.com/p/684659743)，在这里不做具体介绍。
 
-# 1. 部署（环境：Ubuntu 20.04）
+## 1. 部署（环境：Ubuntu 20.04）
 
-## 1.1 检查cuda toolkit
+### 1.1 检查cuda toolkit
 
 使用`nvcc -V`检查是否安装cuda toolkit，项目中需要用Cuda编译mask2former的MSDeformAttn，没有root权限安装cuda推荐[这篇文章](https://blog.csdn.net/Dove_Dan/article/details/130667793)
 
-## 1.2 安装
+### 1.2 安装
 
 下面参照[官方安装教程](https://github.com/MinghanLi/UniVS/blob/main/INSTALL.md)中的 **Example conda environment setup** 部分
 
-### 1.2.1 conda 环境
+#### 1.2.1 conda 环境
 
 创建conda环境、安装pytorch以及opencv：
 
@@ -33,7 +33,7 @@ conda install pytorch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 pytorch-cuda=
 pip install -U opencv-python
 ```
 
-### 1.2.2 detectron2 安装
+#### 1.2.2 detectron2 安装
 
 该项目依赖于detetron2，首先安装detetron2
 
@@ -57,7 +57,7 @@ cd univs/evaluation/davis2017-evaluation
 python setup.py install
 ```
 
-### 1.2.3 UniVS 安装
+#### 1.2.3 UniVS 安装
 
 ```bash
 # under your working directory
@@ -91,7 +91,7 @@ cd univs/evaluation/davis2017-evaluation
 python setup.py install
 ```
 
-### 1.2.4 下载推理所需预训练权重
+#### 1.2.4 下载推理所需预训练权重
 
 这里参考[官方说明文档](https://github.com/MinghanLi/UniVS/blob/main/README.md)以及[model zoo](https://github.com/MinghanLi/UniVS/blob/main/Model_zoo.md)说明。
 
@@ -105,7 +105,7 @@ python setup.py install
 
  3. **其他需要下载的**这个官方没有说明，但是需要下载，与regionCLIP有关，仍然是**google网盘**[regionclip_pretrained-cc_rn50x4_only_lang_encoder.pth](https://drive.google.com/file/d/1jzjiZHRag63KSXZq3XpLXj5FFDRLL9ZX/view?usp=drive_link)，下载后后创建文件夹`pretrained/regionclip/regionclip/`并存放其中。
 
-# 2. 推理自己的视频
+## 2. 推理自己的视频
 
 参考[官方说明文档](https://github.com/MinghanLi/UniVS/blob/main/README.md) **Visualization Demo**小节**Visualization Demo for Custom Videos**部分，该项目支持对视频和视频帧图像的推理。
 

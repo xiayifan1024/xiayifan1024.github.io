@@ -6,14 +6,15 @@ render_with_liquid: false
 excerpt: "整理 VisDrone 数据集预处理流程，提供车辆类别提取、YOLO 标注格式转换及大尺寸图像裁剪的实现代码。"
 ---
 
-# 概述
+## 概述
+
 做无人机视角下目标检测项目，希望利用VisDrone做预训练模型。模型用的是Ultralytics他们家的YOLO系列。需要将原数据集转化为YOLO格式，幸运的是，在 [`../ultralytics/cfg/datasets/VisDrone.yaml`](https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/datasets/VisDrone.yaml) 中有相关代码可直接使用，也可以简要修改，如提取指定目标等；此外，VisDrone-DET的分辨率在2000x1500左右，直接resize不利于小目标的检测，需要进行裁剪。
 
-# 功能函数
+## 功能函数
 
-## 格式转化并提取其中的部分目标（以车辆目标为例）
+### 格式转化并提取其中的部分目标（以车辆目标为例）
 
-### 思路介绍
+#### 思路介绍
 
 参考[ultralytics官方转化代码](https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/datasets/VisDrone.yaml)，需要注意的是，[VisDrone-DET论文](https://arxiv.org/pdf/2001.06303)中包括`ignored regions, pedestrian, people, bicycle, car, van, 
 truck, tricycle, awning-tricycle, bus, motor`共11类，而ultralytics利用判断语句
@@ -33,7 +34,7 @@ if row[4] == '0' or row[5] == '1' or row[5] == '2': # skip VisDrone class 0 'ign
 cls = int(row[5]) - 3
 ```
 
-### 函数实现
+#### 函数实现
 
 ```python
 def visdrone2yolo(dir):
@@ -75,13 +76,13 @@ def visdrone2yolo(dir):
             fl.writelines(lines)  # write label.txt
 ```
 
-## 可视化检查
+### 可视化检查
 
-### 思路介绍
+#### 思路介绍
 
 用于可视化检查转换后的yolo格式后，框是否对应，debug用，也可以其他yolo格式数据可视化（写论文用）。
 
-### 函数实现
+#### 函数实现
 
 ```python
 def draw_yolo_boxes(img_dir, label_dir, class_names, output_dir=None):
@@ -142,13 +143,13 @@ def draw_yolo_boxes(img_dir, label_dir, class_names, output_dir=None):
             cv2.destroyAllWindows()
 ```
 
-## 图片切分
+### 图片切分
 
-### 思路介绍
+#### 思路介绍
 
 读标签，根据裁剪的大小和重叠区域计算边界框的坐标，需要注意的是，如果边界框在裁剪区域外，则忽略该边界框。输出的文件名格式为`{原始文件名}_{x}_{y}`表示在原切割前图片从左上角作为第一张图片切割的坐标，如`image1_1_0`表示被裁剪后的左上角第二个区域。
 
-### 代码实现
+#### 代码实现
 
 ```python
 import os
@@ -245,7 +246,7 @@ def process_dataset(image_dir, label_dir, output_image_dir, output_label_dir, cr
                     save_labels(output_label_path, cropped_labels)
 ```
 
-## 代码执行
+### 代码执行
 
 定义输入文件树
 

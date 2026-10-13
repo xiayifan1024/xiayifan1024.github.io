@@ -6,13 +6,13 @@ render_with_liquid: false
 excerpt: "使用 TensorFlow 2 实现自适应空间特征融合 ASFF，介绍结构设计、特征尺度融合及与 PyTorch 实现的转换差异。"
 ---
 
-# 前言
+## 前言
 
-近期想用各种方法提高一下mAP，看了一下ASPP的方法，都说效果不错。感觉可以当一个即插即用的模块。搜了一下代码，都是pytorch，于是就跟着用TensorFlow改写了一下。 
+近期想用各种方法提高一下mAP，看了一下ASPP的方法，都说效果不错。感觉可以当一个即插即用的模块。搜了一下代码，都是pytorch，于是就跟着用TensorFlow改写了一下。
 
 主要难点可能就在TensorFlow和Pytorch的部分的函数转换和数据结构的不同。TensorFlow是BHWC，即批数量、高、宽、通道数。Pytorch是BCHW，即批数量、通道数、高、宽。
 
-# 参考
+## 参考
 
 论文：[*Learning Spatial Fusion for Single-Shot Object Detection*](https://arxiv.org/abs/1911.09516)
 代码：[ASFF](https://github.com/GOATmessi7/ASFF/blob/4df6f7288b7882a45b8c2dcc3e6e7b499d6cc883/models/network_blocks.py)
@@ -22,12 +22,12 @@ excerpt: "使用 TensorFlow 2 实现自适应空间特征融合 ASFF，介绍结
 
 **[一点就分享系列（实践篇3—上篇）—修改YOLOV5 魔刀小试+ Trick心得分享](https://blog.csdn.net/weixin_44119362/article/details/114289607)**（非常推荐研读一下）
 
-# A结构
+## 结构
 
 ASFF本质上就还是一种金字塔特征融合，不严谨的说有点像全连接，权重还能自适应学习。
 ![ASFF结构](/assets/images/posts/asff-tensorflow2/357f7202da7f1225fd896dcac3822294.png)
 
-# 代码
+## 代码
 
 ```python
 import tensorflow as tf

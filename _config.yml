@@ -51,6 +51,7 @@ defaults:
       type: posts
     values:
       layout: single
+      classes: blog-reading
       locale: zh-CN
       author_profile: false
       read_time: false

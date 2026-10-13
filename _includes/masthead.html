@@ -13,7 +13,20 @@
         <a class="site-title" href="{{ home_url | relative_url }}">{{ text.title | escape }}</a>
         <ul class="visible-links">
           {% for link in navigation %}
-            <li class="masthead__menu-item"><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+            <li class="masthead__menu-item">
+              <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
+              {% if link.url == '/blog/' %}
+                <ul class="sidebar-latest" aria-label="{% if locale == 'en' %}Latest articles{% else %}最新文章{% endif %}">
+                  {% assign latest_posts = site.posts | sort: 'date' | reverse %}
+                  {% for recent_post in latest_posts limit:3 %}
+                    <li>
+                      <a href="{{ recent_post.url | relative_url }}">{{ recent_post.title | escape }}</a>
+                      <time datetime="{{ recent_post.date | date_to_xmlschema }}">{{ recent_post.date | date: '%Y-%m-%d' }}</time>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
           {% endfor %}
           <li class="masthead__menu-item">
             {% if locale == 'en' %}

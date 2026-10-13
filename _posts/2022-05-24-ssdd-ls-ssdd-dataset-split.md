@@ -6,11 +6,11 @@ render_with_liquid: false
 excerpt: "介绍 SSDD 与 LS-SSDD 舰船检测数据集，提供按文件编号划分训练集、验证集和测试集的 Python 代码。"
 ---
 
-# SSDD数据集简介与划分
+## SSDD数据集简介与划分
 
 SAR舰船检测数据集SSDD(SAR Ship Detection Dataset) 可以说是比较经典的数据集了，在 [*SAR Ship Detection Dataset (SSDD): Official Release and Comprehensive Data Analysis*](https://www.mdpi.com/2072-4292/13/18/3690) 里有这样一段话
 
-> The images with the last digits of the file number 1 and 9 are uniquely determined as the test set, and the rest are regarded as the training set. Such a rule can also maintain the distribution consistency of the training set and test set, which is conducive to network feature learning. 
+> The images with the last digits of the file number 1 and 9 are uniquely determined as the test set, and the rest are regarded as the training set. Such a rule can also maintain the distribution consistency of the training set and test set, which is conducive to network feature learning.
 
 大致翻译一下，就是文件编号为1和9的最后一位的图像被严格确定为测试集，其余图像被视为训练集（本人注释：包括验证集）。这样的规则还可以保持训练集和测试集分布的一致性，有利于网络特征学习。
 
@@ -62,7 +62,7 @@ with open("ImageSets/Main/train.txt", 'w') as f:
         f.write(i+'\n')
 ```
 
-# LS-SSDD数据集简介与划分
+## LS-SSDD数据集简介与划分
 
 SSDD虽然经典，但是样本太少了，所以论文 [*LS-SSDD-v1.0: A Deep Learning Dataset Dedicated to Small Ship Detection from Large-Scale Sentinel-1 SAR Images*](https://www.mdpi.com/2072-4292/12/18/2997/htm) 给出了一个新的数据集[LS-SSDD](https://radars.ac.cn/web/data/getData?newsColumnId=6b535674-3ce6-43cc-a725-9723d9c7492c)，这个数据集特点是大尺度影像小舰船检测。由15张24,000×16,000大图以及9,000张分割好的800x800小图组成。文件目录如下图所示。
 
