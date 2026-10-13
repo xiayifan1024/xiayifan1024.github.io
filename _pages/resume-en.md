@@ -5,19 +5,21 @@ redirect_from:
   - /en/
   - /about/
   - /cv/
-classes: wide
+classes: [wide, resume-page]
 locale: en
 lang: en
 translation_key: resume
 description: "Personal résumé, education, experience and selected projects."
 ---
 
-<img class="resume-photo" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Portrait of Yifan Xia" width="160">
-
-Ph.D. Student in Electronic Information  
-Harbin Institute of Technology, Shenzhen
-
-[Email](mailto:xiayifanol@126.com) · [GitHub](https://github.com/xiayifan1024) · [中文]({{ '/zh/' | relative_url }})
+<div class="resume-header">
+  <div class="resume-header-text">
+    <h1>Yifan Xia | 夏一帆</h1>
+    <p>Ph.D. Student in Electronic Information<br>Harbin Institute of Technology, Shenzhen</p>
+    <p><a href="mailto:xiayifanol@126.com">Email</a> · <a href="https://github.com/xiayifan1024">GitHub</a></p>
+  </div>
+  <img class="resume-photo" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Portrait of Yifan Xia" width="160">
+</div>
 
 ## About Me
 

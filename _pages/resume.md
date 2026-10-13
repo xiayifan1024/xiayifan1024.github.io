@@ -1,17 +1,20 @@
 ---
 title: "夏一帆 | Yifan Xia"
 permalink: /zh/
-classes: wide
+classes: [wide, resume-page]
 locale: zh-CN
 lang: zh-CN
 translation_key: resume
 ---
 
-<img class="resume-photo" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="夏一帆的个人照片" width="160">
-
-哈尔滨工业大学（深圳） · 电子信息专业博士研究生
-
-[邮箱](mailto:xiayifanol@126.com) · [GitHub](https://github.com/xiayifan1024) · [English]({{ '/' | relative_url }})
+<div class="resume-header">
+  <div class="resume-header-text">
+    <h1>夏一帆 | Yifan Xia</h1>
+    <p>哈尔滨工业大学（深圳） · 电子信息专业博士研究生</p>
+    <p><a href="mailto:xiayifanol@126.com">邮箱</a> · <a href="https://github.com/xiayifan1024">GitHub</a></p>
+  </div>
+  <img class="resume-photo" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="夏一帆的个人照片" width="160">
+</div>
 
 ## 关于我
 

@@ -29,28 +29,17 @@ html { scroll-behavior: auto !important; }
 .language-switch { margin-bottom: 1.5rem; font-size: 0.85em; }
 .language-switch a[aria-current="page"] { font-weight: 700; text-decoration: none; }
 
-.resume-photo {
-  float: right;
-  width: 160px;
-  max-width: 100%;
-  height: auto;
-  margin: 0 0 1.5rem 2rem;
-  border-radius: 4px;
-}
-@media (max-width: 600px) {
-  .resume-photo { float: none; margin: 0 0 1rem; }
-}
 
 
 /* 手机保留顶部导航，最新文章仅在电脑侧栏展示。 */
 .greedy-nav .sidebar-latest { display: none; }
 
 @media (min-width: 1024px) {
-  body { padding-left: 260px; }
+  body { padding-left: 230px; }
   .masthead {
     position: fixed;
     inset: 0 auto 0 0;
-    width: 260px;
+    width: 230px;
     overflow-y: auto;
     border-bottom: 0;
     border-right: 1px solid #eee;
@@ -103,7 +92,6 @@ body.blog-reading { font-size: 17px; }
 
 @media (min-width: 1024px) {
   body.blog-reading { padding-left: 230px; }
-  .blog-reading .masthead { width: 230px; font-size: 16px; }
   .blog-reading #main > .page { padding-inline-end: 0; }
   /* 中等宽度屏幕把目录放在正文上方，避免挤压每行文字。 */
   .blog-reading .sidebar__right,
@@ -136,4 +124,46 @@ body.blog-reading { font-size: 17px; }
 @media (max-width: 600px) {
   body.blog-reading { font-size: 16px; }
   .blog-reading #main { padding-inline: 16px; }
+}
+
+/* 首页和博客共用文字与导航尺寸，切换页面不改变侧栏。 */
+body { font-size: 17px; }
+.masthead { font-size: 17px; }
+.greedy-nav .sidebar-latest a { font-size: 13px; }
+.sidebar-latest time { font-size: 12px; }
+.site-language-switch {
+  position: fixed;
+  top: 16px;
+  right: 24px;
+  z-index: 30;
+  padding: 6px 10px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.site-language-switch a[aria-current="page"] { font-weight: 700; text-decoration: none; }
+#main { padding-top: 64px; }
+.resume-page .page__inner-wrap > header { display: none; }
+.resume-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 160px;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+.resume-header h1 { margin: 0 0 0.75em; font-size: 1.8em; }
+.resume-header p { margin: 0 0 0.75em; }
+.resume-photo { width: 160px; max-width: 100%; height: auto; border-radius: 4px; }
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  #main { padding-top: 16px; }
+  .resume-header { grid-template-columns: minmax(0, 1fr) 100px; gap: 12px; }
+  .resume-header h1 { font-size: 1.5em; }
+  .resume-photo { width: 100px; }
+}
+
+@media (max-width: 1023px) {
+  .site-language-switch { position: absolute; top: 8px; right: 12px; }
+  .masthead__inner-wrap { padding-top: 48px; }
 }

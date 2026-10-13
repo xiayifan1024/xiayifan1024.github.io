@@ -28,15 +28,14 @@
               {% endif %}
             </li>
           {% endfor %}
-          <li class="masthead__menu-item">
-            {% if locale == 'en' %}
-              <a href="{{ '/zh/' | relative_url }}" lang="zh-CN" hreflang="zh-CN">中文</a>
-            {% else %}
-              <a href="{{ '/' | relative_url }}" lang="en" hreflang="en">English</a>
-            {% endif %}
-          </li>
         </ul>
       </nav>
     </div>
   </div>
 </div>
+
+<nav class="site-language-switch" aria-label="{% if locale == 'en' %}Language{% else %}语言{% endif %}">
+  <a href="{{ '/' | relative_url }}" lang="en" hreflang="en"{% if locale == 'en' %} aria-current="page"{% endif %}>English</a>
+  <span aria-hidden="true"> / </span>
+  <a href="{{ '/zh/' | relative_url }}" lang="zh-CN" hreflang="zh-CN"{% if locale == 'zh-CN' %} aria-current="page"{% endif %}>中文</a>
+</nav>
