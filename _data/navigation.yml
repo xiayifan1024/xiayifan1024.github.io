@@ -1,0 +1,10 @@
+main:
+  - title: "首页"
+    url: /zh/
+  - title: "技术博客"
+    url: /blog/
+main_en:
+  - title: "Home"
+    url: /
+  - title: "Technical Blog"
+    url: /blog/

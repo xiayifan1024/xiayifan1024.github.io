@@ -1,0 +1,17 @@
+---
+locale: zh-CN
+layout: archive
+title: "技术博客"
+permalink: /blog/
+author_profile: false
+redirect_from:
+  - /year-archive/
+  - /archives/
+  - /archives/2019/
+  - /archives/2019/01/
+  - /archives/2019/02/
+---
+
+{% for post in site.posts %}
+  {% include archive-single.html type="list" %}
+{% endfor %}

@@ -1,0 +1,42 @@
+/* 全站静态展示，关闭菜单、按钮及页内跳转动效。 */
+html { scroll-behavior: auto !important; }
+*, *::before, *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+.page__content { line-height: 1.8; }
+.page__content h2 { margin-top: 2rem; }
+.page__content a, .archive__item-title a { text-underline-offset: 0.15em; }
+
+/* 两个导航链接在窄屏上换行，始终直接可见。 */
+.greedy-nav { flex-wrap: wrap; }
+.greedy-nav .visible-links { flex-wrap: wrap; }
+.greedy-nav .visible-links a { margin: 0 0.65rem; }
+.greedy-nav__toggle, .greedy-nav .hidden-links { display: none !important; }
+.code-copy {
+  display: block;
+  margin: 0 0 0.4rem auto;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  background: #fff;
+  color: #333;
+  font-size: 0.7em;
+  cursor: pointer;
+}
+
+.language-switch { margin-bottom: 1.5rem; font-size: 0.85em; }
+.language-switch a[aria-current="page"] { font-weight: 700; text-decoration: none; }
+
+.resume-photo {
+  float: right;
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0 1.5rem 2rem;
+  border-radius: 4px;
+}
+@media (max-width: 600px) {
+  .resume-photo { float: none; margin: 0 0 1rem; }
+}

@@ -1,0 +1,5 @@
+{% assign locale = include.locale | default: site.locale %}
+{% assign text = site.data.site-text[locale] | default: site.data.site-text['zh-CN'] %}
+{% assign home_url = '/zh/' %}
+{% if locale == 'en' %}{% assign home_url = '/' %}{% endif %}
+<div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} <a href="{{ home_url | relative_url }}">{{ text.title | escape }}</a>. {{ text.powered_by }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>

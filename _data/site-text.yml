@@ -1,0 +1,10 @@
+zh-CN:
+  title: "个人主页"
+  navigation_label: "主导航"
+  language_label: "简历语言"
+  powered_by: "由以下工具构建："
+en:
+  title: "Personal Website"
+  navigation_label: "Main navigation"
+  language_label: "Résumé language"
+  powered_by: "Powered by"

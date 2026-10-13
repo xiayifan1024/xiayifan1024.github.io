@@ -1,0 +1,29 @@
+{% assign locale = include.locale | default: site.locale %}
+{% assign text = site.data.site-text[locale] | default: site.data.site-text['zh-CN'] %}
+{% assign home_url = '/zh/' %}
+{% assign navigation = site.data.navigation.main %}
+{% if locale == 'en' %}
+  {% assign home_url = '/' %}
+  {% assign navigation = site.data.navigation.main_en %}
+{% endif %}
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav" aria-label="{{ text.navigation_label }}">
+        <a class="site-title" href="{{ home_url | relative_url }}">{{ text.title | escape }}</a>
+        <ul class="visible-links">
+          {% for link in navigation %}
+            <li class="masthead__menu-item"><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+          {% endfor %}
+          <li class="masthead__menu-item">
+            {% if locale == 'en' %}
+              <a href="{{ '/zh/' | relative_url }}" lang="zh-CN" hreflang="zh-CN">中文</a>
+            {% else %}
+              <a href="{{ '/' | relative_url }}" lang="en" hreflang="en">English</a>
+            {% endif %}
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

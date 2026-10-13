@@ -1,0 +1,62 @@
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: default
+locale: en
+title: "Personal Website"
+description: "Personal résumé and technical blog"
+url: "https://xiayifan1024.github.io"
+baseurl: ""
+repository: "xiayifan1024/xiayifan1024.github.io"
+author:
+  name: "Yifan Xia"
+  avatar: "/assets/images/profile.jpg"
+  bio: ""
+  location: ""
+  links: []
+search: false
+breadcrumbs: false
+enable_copy_code_button: true
+footer_scripts:
+  - /assets/js/static.js
+atom_feed:
+  hide: true
+footer:
+  links: []
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+permalink: /blog/:title/
+tag_archive:
+  type: liquid
+  path: /tags/
+timezone: Asia/Shanghai
+future: false
+include: [_pages]
+exclude: [_legacy, AGENTS.md, README.md, Gemfile, Gemfile.lock, vendor, node_modules]
+plugins:
+  - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-redirect-from
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      locale: zh-CN
+      author_profile: false
+      read_time: false
+      comments: false
+      share: false
+      related: false
+      toc: true
+      toc_label: "文章目录"
+      toc_sticky: true
