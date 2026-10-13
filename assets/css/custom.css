@@ -32,7 +32,7 @@ html { scroll-behavior: auto !important; }
 
 
 /* 手机保留顶部导航，最新文章仅在电脑侧栏展示。 */
-.greedy-nav .sidebar-latest { display: none; }
+.sidebar-sections { display: none; }
 
 @media (min-width: 1024px) {
   body { padding-left: 230px; }
@@ -166,4 +166,30 @@ body { font-size: 17px; }
 @media (max-width: 1023px) {
   .site-language-switch { position: absolute; top: 8px; right: 12px; }
   .masthead__inner-wrap { padding-top: 48px; }
+}
+
+@media (min-width: 1024px) {
+  .sidebar-sections { display: block; margin-top: 0.8rem; }
+  .sidebar-section { margin-top: 0.65rem; }
+  .sidebar-section summary {
+    display: list-item;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+  .sidebar-section summary:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+  .greedy-nav .sidebar-tags { margin-top: 0.6rem; padding-left: 0.75rem; border-left: 1px solid #ddd; }
+  .greedy-nav .sidebar-tags a {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0.25rem 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .greedy-nav .sidebar-tags a::before { display: none; }
+  .sidebar-tag-count { flex-shrink: 0; color: #777; }
 }

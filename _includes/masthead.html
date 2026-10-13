@@ -16,6 +16,9 @@
             <li class="masthead__menu-item">
               <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
               {% if link.url == '/blog/' %}
+                <div class="sidebar-sections">
+                  <details class="sidebar-section">
+                    <summary>{{ text.recent_posts }}</summary>
                 <ul class="sidebar-latest" aria-label="{% if locale == 'en' %}Latest articles{% else %}最新文章{% endif %}">
                   {% assign latest_posts = site.posts | sort: 'date' | reverse %}
                   {% for recent_post in latest_posts limit:3 %}
@@ -25,6 +28,18 @@
                     </li>
                   {% endfor %}
                 </ul>
+                  </details>
+                  <details class="sidebar-section">
+                    <summary>{{ text.post_tags }}</summary>
+                    <ul class="sidebar-tags">
+                      {% assign sorted_tags = site.tags | sort %}
+                      {% for tag in sorted_tags %}
+                        {% assign tag_slug = tag[0] | slugify %}
+                        <li><a href="{{ '/tags/' | relative_url }}#{{ tag_slug | uri_escape }}"><span>{{ tag[0] | escape }}</span><span class="sidebar-tag-count">{{ tag[1].size }}</span></a></li>
+                      {% endfor %}
+                    </ul>
+                  </details>
+                </div>
               {% endif %}
             </li>
           {% endfor %}
