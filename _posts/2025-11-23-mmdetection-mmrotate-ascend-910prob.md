@@ -166,7 +166,7 @@ git clone -b 1.x https://github.com/open-mmlab/mmrotate.git
 
 - 修改`./requirements/mminstall.txt`内容
 
-```txt
+```text
 # mmcv>=2.0.0rc2,<2.1.0
 mmcv>=2.0.0rc2
 # mmdet>=3.0.0rc2,<3.1.0
