@@ -18,3 +18,22 @@ if (navigator.clipboard && window.isSecureContext) {
     pre.before(button);
   });
 }
+
+// 双击个人照片切换彩蛋；刷新页面后恢复默认照片。
+document.querySelectorAll(".resume-photo[data-easter-egg-src]").forEach((photo) => {
+  const originalSrc = photo.getAttribute("src");
+  const easterEggSrc = photo.dataset.easterEggSrc;
+  const preload = new Image();
+  let ready = false;
+  let showingEasterEgg = false;
+
+  preload.addEventListener("load", () => { ready = true; });
+  preload.src = easterEggSrc;
+  photo.draggable = false;
+  photo.addEventListener("dblclick", (event) => {
+    event.preventDefault();
+    if (!ready) return;
+    showingEasterEgg = !showingEasterEgg;
+    photo.src = showingEasterEgg ? easterEggSrc : originalSrc;
+  });
+});

@@ -13,7 +13,7 @@ translation_key: resume
     <p>哈尔滨工业大学（深圳） · 电子信息专业博士研究生</p>
     <p><a href="mailto:xiayifanol@126.com">邮箱</a> · <a href="https://github.com/xiayifan1024">GitHub</a></p>
   </div>
-  <img class="resume-photo" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="夏一帆的个人照片" width="210">
+  <img class="resume-photo" data-easter-egg-src="{{ '/assets/images/profile-easter-egg.jpg' | relative_url }}" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="夏一帆的个人照片" width="210">
 </div>
 
 ## 关于我

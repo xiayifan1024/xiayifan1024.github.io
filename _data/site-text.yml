@@ -4,9 +4,11 @@ zh-CN:
   post_tags: "文章标签"
   navigation_label: "主导航"
   powered_by: "由以下工具构建："
+  ai_assisted: "本站由 AI 辅助构建。"
 en:
   title: "Personal Website"
   recent_posts: "Recent Posts"
   post_tags: "Post Tags"
   navigation_label: "Main navigation"
   powered_by: "Powered by"
+  ai_assisted: "Built with AI assistance."
