@@ -217,3 +217,21 @@ body { font-size: 17px; }
 .code-language { font-weight: 600; color: #555; }
 .code-block-header .code-copy { margin: 0; font-size: 12px; }
 .code-block-header + pre { margin-top: 0; }
+
+/* 未高亮的纯文本代码块也使用完整的代码样式。 */
+.page__content pre:not(.highlight) {
+  padding: 1em;
+  background: #263238;
+  color: #eeffff;
+  border-radius: 0 0 4px 4px;
+  line-height: 1.8;
+  tab-size: 4;
+}
+.page__content pre > code {
+  display: block;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: normal;
+}

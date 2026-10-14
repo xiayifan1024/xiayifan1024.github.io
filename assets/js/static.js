@@ -5,10 +5,10 @@ const codeLanguageNames = {
   typescript: "TypeScript", ts: "TypeScript", cpp: "C++", c: "C",
   yaml: "YAML", yml: "YAML", json: "JSON", html: "HTML", css: "CSS",
   ruby: "Ruby", sql: "SQL", markdown: "Markdown", md: "Markdown",
-  text: "Text", plaintext: "Text"
+  text: "Text", txt: "Text", plaintext: "Text"
 };
 document.querySelectorAll(".page__content pre").forEach((pre) => {
-  const languageElement = pre.closest('[class*="language-"]');
+  const languageElement = pre.closest('[class*="language-"]') || pre.querySelector('[class*="language-"]');
   const languageClass = languageElement && [...languageElement.classList]
     .find((name) => name.startsWith("language-"));
   const language = languageClass ? languageClass.slice(9) : "text";
