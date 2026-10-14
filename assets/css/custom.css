@@ -201,3 +201,19 @@ body { font-size: 17px; }
   vertical-align: middle;
   margin: 0 0.5em 0 0;
 }
+
+.code-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 10px;
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-bottom: 0;
+  border-radius: 4px 4px 0 0;
+  font-size: 13px;
+}
+.code-language { font-weight: 600; color: #555; }
+.code-block-header .code-copy { margin: 0; font-size: 12px; }
+.code-block-header + pre { margin-top: 0; }

@@ -16,7 +16,7 @@ excerpt: "记录在昇腾 910ProB 平台适配 MMDetection 和 MMRotate 的过�
 
 ### 2. 离线服务器：Atlas 300T Pro (910ProB)
 
-参考：[Atlas 300T Pro 训练卡 快速指南 (型号 9000)](https://support.huawei.com/enterprise/zh/doc/EDOC1100301103?idPath=23710424|251366513|22892968|252309113|256118195)
+参考：[Atlas 300T Pro 训练卡 快速指南 (型号 9000)](https://support.huawei.com/enterprise/zh/doc/EDOC1100301103?idPath=23710424%7C251366513%7C22892968%7C252309113%7C256118195)
 
 ## 二、昇腾训练卡驱动安装
 

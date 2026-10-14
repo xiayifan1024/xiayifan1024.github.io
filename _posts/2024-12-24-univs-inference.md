@@ -10,7 +10,7 @@ excerpt: "记录 UniVS 视频分割推理的复现过程，涵盖 CUDA 与依赖
 
 项目地址：[UniVS](https://github.com/MinghanLi/UniVS/)：https://github.com/MinghanLi/UniVS/
 
-项目介绍：参见 [CVPR 2024 | 视频分割大一统！UniVS：统一通用视频分割](https://zhuanlan.zhihu.com/p/684659743)，在这里不做具体介绍。
+项目介绍：参见 [CVPR 2024 \| 视频分割大一统！UniVS：统一通用视频分割](https://zhuanlan.zhihu.com/p/684659743)，在这里不做具体介绍。
 
 ## 1. 部署（环境：Ubuntu 20.04）
 
