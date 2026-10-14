@@ -22,3 +22,6 @@ package-lock.json
 
 .jekyll-cache/
 .jekyll-metadata
+
+# Local-only helper scripts (not tracked)
+auto-commit.sh
