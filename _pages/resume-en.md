@@ -18,7 +18,7 @@ description: "Personal résumé, education, experience and selected projects."
     <p>Ph.D. Student in Electronic Information<br>Harbin Institute of Technology, Shenzhen</p>
     <p><a href="mailto:xiayifanol@126.com">Email</a> · <a href="https://github.com/xiayifan1024">GitHub</a></p>
   </div>
-  <img class="resume-photo" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Portrait of Yifan Xia" width="160">
+  <img class="resume-photo" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Portrait of Yifan Xia" width="210">
 </div>
 
 ## About Me
