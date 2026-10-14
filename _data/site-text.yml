@@ -3,12 +3,10 @@ zh-CN:
   recent_posts: "最近博客"
   post_tags: "文章标签"
   navigation_label: "主导航"
-  language_label: "简历语言"
   powered_by: "由以下工具构建："
 en:
   title: "Personal Website"
   recent_posts: "Recent Posts"
   post_tags: "Post Tags"
   navigation_label: "Main navigation"
-  language_label: "Résumé language"
   powered_by: "Powered by"

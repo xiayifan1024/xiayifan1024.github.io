@@ -33,7 +33,7 @@ tag_archive:
 timezone: Asia/Shanghai
 future: false
 include: [_pages]
-exclude: [_legacy, AGENTS.md, README.md, Gemfile, Gemfile.lock, vendor, node_modules]
+exclude: [AGENTS.md, README.md, Gemfile, Gemfile.lock, vendor, node_modules]
 plugins:
   - jekyll-include-cache
   - jekyll-feed

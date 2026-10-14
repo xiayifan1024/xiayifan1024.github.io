@@ -36,16 +36,16 @@ My current interests center on **efficient video understanding with multimodal m
 
 ## Education
 
-**Harbin Institute of Technology, Shenzhen**  
+<img class="education-logo" src="{{ '/assets/images/logos/HIT-logo.png' | relative_url }}" alt="" width="36" height="36"> **Harbin Institute of Technology, Shenzhen**<br>
 Ph.D. Student in Electronic Information | Sep. 2026 - Present  
 Advisor: Prof. Miao Zhang.
 
-**University of Chinese Academy of Sciences**  
+<img class="education-logo" src="{{ '/assets/images/logos/UCAS-logo.png' | relative_url }}" alt="" width="36" height="36"> **University of Chinese Academy of Sciences**<br>
 Aerospace Information Research Institute, Chinese Academy of Sciences  
 Professional Master's Degree in Electronic Information | Sep. 2020 - Jun. 2023  
 Research focus: SAR object detection. Advisor: Prof. Fengjun Zhao.
 
-**China University of Mining and Technology, Beijing**  
+<img class="education-logo" src="{{ '/assets/images/logos/CUMTB-logo.png' | relative_url }}" alt="" width="36" height="36"> **China University of Mining and Technology, Beijing**<br>
 School of Geosciences and Surveying Engineering  
 B.Eng. in Remote Sensing Science and Technology | Sep. 2017 - Jun. 2021  
 Minor: Computer Science and Technology. Advisor: Prof. Debao Yuan.

@@ -26,8 +26,6 @@ html { scroll-behavior: auto !important; }
   cursor: pointer;
 }
 
-.language-switch { margin-bottom: 1.5rem; font-size: 0.85em; }
-.language-switch a[aria-current="page"] { font-weight: 700; text-decoration: none; }
 
 
 
@@ -192,4 +190,14 @@ body { font-size: 17px; }
   }
   .greedy-nav .sidebar-tags a::before { display: none; }
   .sidebar-tag-count { flex-shrink: 0; color: #777; }
+}
+
+/* 校徽与学校名称在同一行对齐，保持原图比例。 */
+.page__content .education-logo {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin: 0 0.5em 0 0;
 }

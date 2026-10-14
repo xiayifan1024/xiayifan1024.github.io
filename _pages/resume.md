@@ -31,15 +31,15 @@ translation_key: resume
 
 ## 教育经历
 
-**哈尔滨工业大学（深圳）**  
+<img class="education-logo" src="{{ '/assets/images/logos/HIT-logo.png' | relative_url }}" alt="" width="36" height="36"> **哈尔滨工业大学（深圳）**<br>
 电子信息专业博士研究生 | 2026.09 - 至今  
 导师：张淼教授。
 
-**中国科学院大学 · 空天信息创新研究院**  
+<img class="education-logo" src="{{ '/assets/images/logos/UCAS-logo.png' | relative_url }}" alt="" width="36" height="36"> **中国科学院大学 · 空天信息创新研究院**<br>
 电子信息专业硕士 | 2020.09 - 2023.06  
 研究方向：SAR 图像目标检测。导师：赵凤军研究员。
 
-**中国矿业大学（北京） · 地球科学与测绘工程学院**  
+<img class="education-logo" src="{{ '/assets/images/logos/CUMTB-logo.png' | relative_url }}" alt="" width="36" height="36"> **中国矿业大学（北京） · 地球科学与测绘工程学院**<br>
 遥感科学与技术工学学士 | 2017.09 - 2021.06  
 辅修：计算机科学与技术。导师：袁德宝教授。
 

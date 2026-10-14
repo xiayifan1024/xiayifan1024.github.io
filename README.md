@@ -1,29 +1,43 @@
 # 个人主页与技术博客
 
-使用 Jekyll + Minimal Mistakes。首页为简历，个人信息暂留空；技术博客位于 `/blog/`，点击标题直接阅读正文。关闭页面动画和过渡。
+使用 Jekyll + Minimal Mistakes，英文简历为默认首页。电脑端使用左侧导航，最近博客和文章标签可以点击展开；页面右上角切换中英文简历。全站关闭动画和过渡。
 
-## 修改内容
+## 内容维护
 
-- `_pages/resume.md`：填写首页简历，各栏目内有不可见的编辑提示。
-- `_config.yml`：修改站点标题、描述和个人资料。
-- `_data/navigation.yml`：修改顶部导航。
-- `_posts/`：添加文章，文件名使用 `YYYY-MM-DD-title.md`。
-- `assets/css/custom.css`：自定义样式。
+- `_pages/resume-en.md`：英文简历，地址 `/`。
+- `_pages/resume.md`：中文简历，地址 `/zh/`。
+- `_posts/`：Markdown 文章，命名为 `YYYY-MM-DD-title.md`。
+- `_pages/blog.html`：技术博客列表，地址 `/blog/`。
+- `_pages/tags.html`：标签归档，地址 `/tags/`，标签从文章自动生成。
+- `_data/navigation.yml`：中英文导航。
+- `_data/site-text.yml`：中英文界面文字。
+- `_config.yml`：站点信息、文章默认配置和构建设置。
+- `assets/css/custom.css`：自定义排版。
+- `assets/images/profile.jpg`：中英文简历共用的个人照片。
+- `assets/images/logos/`：教育经历的学校标识。
+- `assets/images/posts/`：按文章组织的配图。
 
-文章示例：
+## 添加文章
+
+新建 `_posts/2026-10-14-example.md`：
 
 ```markdown
 ---
 title: "文章标题"
+date: 2026-10-14
 tags: [Python]
+excerpt: "一两句话概括文章内容，用于博客列表摘要。"
+render_with_liquid: false
 ---
 
 ## 内容
 
 正文直接写 Markdown。
+
+![图片说明](/assets/images/posts/example/image.png)
 ```
 
-原 Hexo 两篇文章从 Git 历史恢复为 HTML 文章，保留原始正文和访问地址；新文章直接用 Markdown。原 Academic Pages 模板及示例内容备份在 `_legacy/academicpages/`，不会参与构建或发布。
+文章地址统一为 `/blog/文件名中去掉日期的部分/`。`render_with_liquid: false` 可防止代码片段中的模板标记被执行。未来日期的文章不会发布。
 
 ## 本地预览
 
@@ -35,22 +49,16 @@ bundle install
 bundle exec jekyll serve
 ```
 
-访问 `http://localhost:4000`。
+访问 `http://localhost:4000`。正式构建可运行 `bundle exec jekyll build --strict_front_matter`。
 
 ## GitHub Pages
 
-在仓库 Settings → Pages → Build and deployment → Source 中选择 GitHub Actions。推送到 `master` 后，`.github/workflows/jekyll.yml` 会构建并发布；拉取请求仅验证构建。
+仓库 Settings → Pages → Build and deployment → Source 选择 GitHub Actions。推送到 `master` 后，`.github/workflows/jekyll.yml` 构建并发布；拉取请求仅验证构建。
+
+## 历史清理
+
+旧 Hexo 文章已转为 Markdown，保留正文、日期、摘要及当前标签。旧的 `/2019/.../`、`/archives/.../`、`/year-archive/`、`/tags/DL/` 和 `/tags/Hexo/` 兼容地址已移除。
+
+未使用的 Academic Pages 模板备份与上游协作模板已删除，仍可从 Git 历史恢复。简历入口 `/en/`、`/about/` 和 `/cv/` 继续跳转到当前首页。
 
 主题文档：https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-
-## 中英双语简历
-
-- 中文简历：`_pages/resume.md`，访问 `/zh/`。
-- 英文简历：`_pages/resume-en.md`，默认首页 `/`；旧地址 `/en/` 自动跳转到首页。
-- 两页分别维护，通过顶部导航和正文顶部的语言链接切换。
-- `_data/site-text.yml` 控制中英文站点名称、导航辅助文字和页脚文字。
-- `_data/navigation.yml` 的 `main` 与 `main_en` 分别控制中英文导航。
-- 技术博客共用 `/blog/`，文章保留原语言。
-- 两页可共用同一张照片，例如 `/assets/images/profile.jpg`。
-
-个人照片存放在 `assets/images/profile.jpg`，中英文简历共用；更换照片时覆盖该文件即可。
