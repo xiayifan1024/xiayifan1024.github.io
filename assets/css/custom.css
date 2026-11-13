@@ -88,6 +88,24 @@ body.blog-reading { font-size: 17px; }
 .blog-reading .archive__item-excerpt { font-size: 1em; line-height: 1.7; }
 .blog-reading #main { max-width: 1440px; padding-inline: 24px; }
 
+.spatial-survey .page__content p > img:only-child {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.4em auto;
+}
+.spatial-survey .page__content th,
+.spatial-survey .page__content td {
+  text-align: start;
+  vertical-align: top;
+}
+.spatial-survey .survey-methods { overflow-x: auto; }
+.spatial-survey .survey-methods table {
+  display: table;
+  width: 100%;
+  min-width: 52em;
+}
+
 @media (min-width: 1024px) {
   body.blog-reading { padding-left: 230px; }
   .blog-reading #main > .page { padding-inline-end: 0; }
