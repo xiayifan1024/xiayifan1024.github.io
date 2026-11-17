@@ -4,6 +4,7 @@ date: 2026-11-16
 tags: ["哈工大", "文献阅读", "Sptatial Intelligence", "Benchmark"]
 excerpt: "OVO-S-Bench 构建了一个连续第一人称视频上进行流式空间智能评测的基准。"
 render_with_liquid: false
+math: true
 ---
 
 ## 论文信息
@@ -246,12 +247,12 @@ Table 3 对九组思考与非思考配置进行比较：
 
 作者对 HERMES、StreamingTOM、FluxMem 记录每次查询时仍保留哪些视频时刻，定义 **Evidence Recall（ER）**：人工证据区间中有多少时间范围在压缩后仍被保留。
 
-\[
+$$
 \mathrm{ER}
 =
 \frac{\text{证据区间内仍被保留的时间单元数量}}
 {\text{证据区间包含的时间单元总数}}
-\]
+$$
 
 文章使用 **1 秒时间单元（1-s bins）**进行保留情况统计。例如：
 - 证据区间覆盖 10 个一秒时间单元；

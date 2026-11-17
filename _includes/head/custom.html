@@ -1,4 +1,7 @@
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+{% if page.math %}
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+{% endif %}
 {% if page.translation_key == 'resume' %}
 <link rel="alternate" hreflang="zh-CN" href="{{ '/zh/' | absolute_url }}">
 <link rel="alternate" hreflang="en" href="{{ '/' | absolute_url }}">
