@@ -1,7 +1,7 @@
 ---
 title: "ASFF的TensorFlow2实现"
 date: 2022-07-20
-tags: [空天院, 模型结构]
+tags: ["空天院", "模型结构", "科研实践"]
 render_with_liquid: false
 excerpt: "使用 TensorFlow 2 实现自适应空间特征融合 ASFF，介绍结构设计、特征尺度融合及与 PyTorch 实现的转换差异。"
 ---

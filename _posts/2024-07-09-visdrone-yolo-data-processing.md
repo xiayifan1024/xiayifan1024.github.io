@@ -1,7 +1,7 @@
 ---
 title: "VisDrone数据集处理：车辆提取、YOLO格式转化、训练数据裁剪"
 date: 2024-07-09
-tags: [计算所, 目标检测, 数据处理]
+tags: ["计算所", "目标检测", "数据处理", "工程实践"]
 render_with_liquid: false
 excerpt: "整理 VisDrone 数据集预处理流程，提供车辆类别提取、YOLO 标注格式转换及大尺寸图像裁剪的实现代码。"
 ---

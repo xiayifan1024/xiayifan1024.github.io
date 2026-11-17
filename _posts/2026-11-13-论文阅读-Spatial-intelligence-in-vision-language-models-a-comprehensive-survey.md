@@ -1,10 +1,9 @@
 ---
-title: "Spatial intelligence in vision-language models: a comprehensive survey"
+title: "论文阅读: Spatial intelligence in vision-language models: a comprehensive survey"
 date: 2026-11-13
-tags: ["哈工大", "文献阅读", "Sptatial Reasoning", "综述"]
+tags: ["哈工大", "文献阅读", "Sptatial Intelligence", "综述"]
 excerpt: "本文围绕视觉语言模型的空间智能展开综述，将相关任务划分为感知、理解和外推三个层级，并梳理了训练数据、评估基准、模型局限及主要增强方法。"
 render_with_liquid: false
-classes: [blog-reading, spatial-survey]
 ---
 
 ## 论文信息

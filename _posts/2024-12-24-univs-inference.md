@@ -1,7 +1,7 @@
 ---
 title: "UniVS推理复现踩坑"
 date: 2024-12-24
-tags: [计算所, 模型部署]
+tags: ["计算所", "模型部署", "工程实践"]
 render_with_liquid: false
 excerpt: "记录 UniVS 视频分割推理的复现过程，涵盖 CUDA 与依赖安装、模型权重准备以及可视化推理配置。"
 ---

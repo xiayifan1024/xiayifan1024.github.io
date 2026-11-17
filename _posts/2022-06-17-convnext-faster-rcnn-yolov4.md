@@ -1,7 +1,7 @@
 ---
 title: "ConvNext做Backbone的Faster R-CNN和YOLOV4（结合博主Bubbliiing的TF2实现代码）"
 date: 2022-06-17
-tags: [空天院, 模型结构]
+tags: ["空天院", "模型结构", "科研实践"]
 render_with_liquid: false
 excerpt: "基于 TensorFlow 2 实现 ConvNeXt，并结合 Bubbliiing 的检测框架，将其作为 YOLOv4 和 Faster R-CNN 的骨干网络。"
 ---

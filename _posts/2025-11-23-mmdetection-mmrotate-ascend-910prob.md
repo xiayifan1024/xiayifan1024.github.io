@@ -1,7 +1,7 @@
 ---
 title: "mmdetection以及mmrotate适配昇腾910ProB记录"
 date: 2025-11-23
-tags: [计算所, 目标检测, 模型部署]
+tags: ["计算所", "目标检测", "模型部署", "工程实践"]
 render_with_liquid: false
 excerpt: "记录在昇腾 910ProB 平台适配 MMDetection 和 MMRotate 的过程，涵盖驱动、CANN、PyTorch NPU 与 MMCV 安装及兼容性处理。"
 ---
