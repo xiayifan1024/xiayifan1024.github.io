@@ -69,7 +69,7 @@ render_with_liquid: false
 
 ### 3.1 任务定义
 
-![四个层级与各任务族的代表性问题](../assets/images/posts/OVO-S-Bench/OVO-S-Bench.png)
+![四个层级与各任务族的代表性问题](/assets/images/posts/OVO-S-Bench/OVO-S-Bench.png)
 
 论文按查询时需要访问和操作的空间状态，将问题划分为四层，每层包含三个任务族，共 30 种规范任务类型。（§3.1、附录 D）
 
@@ -80,7 +80,7 @@ render_with_liquid: false
 | **L3 生成式空间推理** | 空间想象：对空间状态进行操作后，会得到什么结果 | 空间模拟；时空一致性验证；空间路径规划 | 电视旋转后能否穿窗，前后观察有哪些变化，避开某条通道后如何到达目标 |
 | **L4 非自我中心空间建图** | 全局整合：跨视角整合后的全局布局是什么 | 全局方向推理；拓扑结构推理；轨迹—地图对齐 | 厨房在客厅的哪个方位，哪些房间直接连通，走过的路线对应哪张俯视图 |
 
-#### 与[空间智能综述](./2026-11-13-论文阅读-Spatial-intelligence-in-vision-language-models-a-comprehensive-survey.md)三层分类的关系
+#### 与[空间智能综述](/blog/论文阅读-Spatial-intelligence-in-vision-language-models-a-comprehensive-survey/)三层分类的关系
 
 空间智能综述采用“感知—理解—外推”，OVO-S-Bench 则进一步强调历史证据和全局空间整合。两者可以建立概念联系，但没有严格的一一对应关系。
 
@@ -95,7 +95,7 @@ render_with_liquid: false
 ### 3.2 Benchmark构建
 
 Benchmark 的构建细节如下图所示：
-![OVO-S-Bench 的分类体系与基准统计](../assets/images/posts/OVO-S-Bench/axonomy_and_benchmark_statistics.png)
+![OVO-S-Bench 的分类体系与基准统计](/assets/images/posts/OVO-S-Bench/axonomy_and_benchmark_statistics.png)
 
 #### 数据规模
 - 视频数：348 段
@@ -120,7 +120,7 @@ Benchmark 的构建细节如下图所示：
 
 在数据格式上，该基准以单个 JSONL 文件（ovo_s_bench_l1_l4.jsonl）形式发布，每个条目对应一个 JSON 对象（共 1 680 个条目，覆盖 L1–L4）。字段意义和示例如下。
 
-![JSONL字段意义和示例](../assets/images/posts/OVO-S-Bench/DataFormat.png)
+![JSONL字段意义和示例](/assets/images/posts/OVO-S-Bench/DataFormat.png)
 
 其中，关于“查询时刻”与“证据区间”在数据中以 `"query_times"` 和 `"evidence_times"` 表示。
 
@@ -171,7 +171,7 @@ the online protocol. "`但上面示例中证据区间跨过了查询时刻。
 
 ## 5. 实验结果与分析
 
-![实验结果](../assets/images/posts/OVO-S-Bench/OVO-S-Bench-A-Hierarchical-Benchmark-for-Streaming-Spatial-Intelligence-in-Multi-p7-table-2.png)
+![实验结果](/assets/images/posts/OVO-S-Bench/OVO-S-Bench-A-Hierarchical-Benchmark-for-Streaming-Spatial-Intelligence-in-Multi-p7-table-2.png)
 
 ### 5.1 实验观察
 
@@ -183,7 +183,7 @@ the online protocol. "`但上面示例中证据区间跨过了查询时刻。
 
 ### 5.2 L4 是最集中的瓶颈，但能力排序并不严格逐层下降
 
-这与 [空间智能综述](./2026-11-13-论文阅读-Spatial-intelligence-in-vision-language-models-a-comprehensive-survey.md) 的发现的现象一致，这也让我对 **“以人类启发的任务分类”** 的合理性产生了更进一步的怀疑。
+这与 [空间智能综述](/blog/论文阅读-Spatial-intelligence-in-vision-language-models-a-comprehensive-survey/) 的发现的现象一致，这也让我对 **“以人类启发的任务分类”** 的合理性产生了更进一步的怀疑。
 
 实际上，如果我们观察人类的两次实验：
 
@@ -196,13 +196,13 @@ the online protocol. "`但上面示例中证据区间跨过了查询时刻。
 
 将模型和人类在 L1-L2-L3-L4 的分数趋势如下图表示出来。
 
-!["L1-L4 趋势图"](../assets/images/posts/OVO-S-Bench/table-2-level-trends.png)
+!["L1-L4 趋势图"](/assets/images/posts/OVO-S-Bench/table-2-level-trends.png)
 
 发现从 L1 到 L2 任务得分上出现了分化：人类明显下降，模型却得分上涨，个人认为这与人与模型的记忆机制是不一样的原因有关。
 
 ### 5.3 思考模式的收益取决于模型和任务
 
-![思考模式相对非思考模式的准确率变化，单位为百分点](../assets/images//posts/OVO-S-Bench/OVO-S-Bench-A-Hierarchical-Benchmark-for-Streaming-Spatial-Intelligence-in-Multi-p8-table-3-1.png)
+![思考模式相对非思考模式的准确率变化，单位为百分点](/assets/images/posts/OVO-S-Bench/OVO-S-Bench-A-Hierarchical-Benchmark-for-Streaming-Spatial-Intelligence-in-Multi-p8-table-3-1.png)
 
 Table 3 对九组思考与非思考配置进行比较：
 
@@ -212,7 +212,7 @@ Table 3 对九组思考与非思考配置进行比较：
 
 作者进一步分析了八个思考模型的错误轨迹，将问题分为无法输出结论、脱离视觉的先验推断、视觉内容错误、方向错误和时间绑定错误。
 
-![八个思考模型的错误数量与错误类别分布](../assets/images/posts/OVO-S-Bench/Figure-4.png)
+![八个思考模型的错误数量与错误类别分布](/assets/images/posts/OVO-S-Bench/figure-4.png)
 
 在 GLM、Qwen3-VL 和 InternVL 等受测模型中，“不依赖视觉证据的推断”和“声称了画面未支持的空间内容”合计占错误轨迹的约 60%–80%；部分 Qwen3.5 配置还出现耗尽思考预算但未输出答案的问题（ **雷霆大思考**）。
 
@@ -238,9 +238,9 @@ Table 3 对九组思考与非思考配置进行比较：
 
 部分方法在 L1 改善，却在 L4 退步。例如 VST-7B-RL 的 L1 相对底座增加约 4.9，L4 下降约 6.7。这提示局部空间监督、事件记忆或动作任务上的增强，未必迁移到长程全局空间结构。
 
-![空间特化、流式、压缩及具身方法相对各自底座的分数变化](../assets/images/posts/OVO-S-Bench/table-5.png)
+![空间特化、流式、压缩及具身方法相对各自底座的分数变化](/assets/images/posts/OVO-S-Bench/table-5.png)
 
-与 [空间智能综述](./2026-11-13-论文阅读-Spatial-intelligence-in-vision-language-models-a-comprehensive-survey.md) 的发现的现象一致，在此不做过多分析。
+与 [空间智能综述](/blog/论文阅读-Spatial-intelligence-in-vision-language-models-a-comprehensive-survey/) 的发现的现象一致，在此不做过多分析。
 
 ### 6.5 保留了历史证据不代表能够正确使用
 
@@ -258,7 +258,7 @@ Table 3 对九组思考与非思考配置进行比较：
 - 压缩后，记忆仍保留其中 4 个时间单元对应的信息；
 - 则 ER 为 \(4/10=0.4\)。
 
-![保留时间分布、各层证据召回与正确率的关系](../assets/images/posts/OVO-S-Bench/figure-5.png)
+![保留时间分布、各层证据召回与正确率的关系](/assets/images/posts/OVO-S-Bench/figure-5.png)
 
 L4 的平均 ER 约为 0.14–0.42，低于 L1 的约 0.60–0.76，说明记忆压缩确实会丢弃长程任务需要的证据；但在这三种方法中，逐题 ER 与正确率的线性相关性很弱。（§4.3.3）
 
