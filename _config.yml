@@ -2,7 +2,7 @@ theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: default
 locale: en
 title: "Personal Website"
-description: "Personal résumé and technical blog"
+description: "Personal résumé and articles"
 url: "https://xiayifan1024.github.io"
 baseurl: ""
 repository: "xiayifan1024/xiayifan1024.github.io"
