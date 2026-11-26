@@ -64,10 +64,10 @@ Look Light, Think Heavy: What Multimodal Chain-of-Thought Reasoning Can and Cann
 
 ### 3.1 CoT 与直接作答的形式化
 
-给定图像集合 $I$、问题 $q$：
+给定图像集合 $$I$$、问题 $$q$$：
 
-- **CoT：** $r, a = M(I, p_c, q)$，其中 $r$ 为推理过程，$a$ 为答案。$p_c$ 形如 “Please first think about the reasoning process as an internal monologue and then provide the final answer.”，并要求推理放在 `<think></think>` 中、答案放在 `\boxed{}` 中。
-- **直接作答：** $a = M(I, p_d, q)$，$p_d$ 形如 “Please generate the answer directly.”。
+- **CoT：** $$r, a = M(I, p_c, q)$$，其中 $$r$$ 为推理过程，$$a$$ 为答案。$$p_c$$ 形如 “Please first think about the reasoning process as an internal monologue and then provide the final answer.”，并要求推理放在 `<think></think>` 中、答案放在 `\boxed{}` 中。
+- **直接作答：** $$a = M(I, p_d, q)$$，$$p_d$$ 形如 “Please generate the answer directly.”。
 
 ### 3.2 任务与数据
 
@@ -199,7 +199,7 @@ Look Light, Think Heavy: What Multimodal Chain-of-Thought Reasoning Can and Cann
 | 探针类型 | 含义 | 例子（MathVerse / PuzzleVQA） |
 | --- | --- | --- |
 | **视觉推理探针** | 需要分析和推理视觉信息的中间步骤 | “含边 y 的两个三角形是什么关系？”→ 相似三角形；“推断缺失数字应参考哪两个数？”→ 2 和 8 |
-| **文本推理探针** | 不依赖视觉信息、只需文本推理的中间步骤 | “解方程 $\frac{12-8}{y}=\frac{y}{8}$”→ $4\sqrt{2}$；“根据 [?,1,5]、[2,3,6]、[8,4,32] 的规律求缺失数”→ 5 |
+| **文本推理探针** | 不依赖视觉信息、只需文本推理的中间步骤 | “解方程 $$\frac{12-8}{y}=\frac{y}{8}$$”→ $$4\sqrt{2}$$；“根据 [?,1,5]、[2,3,6]、[8,4,32] 的规律求缺失数”→ 5 |
 
 ![视觉探针和思维探针](/assets/images/posts/Look-Light-Think-Heavy/figure-probes.png)
 
