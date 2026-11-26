@@ -1,7 +1,7 @@
 ---
 title: "论文阅读: Spatial intelligence in vision-language models: a comprehensive survey"
 date: 2026-11-13
-tags: ["哈工大", "文献阅读", "Sptatial Intelligence", "综述"]
+tags: ["哈工大", "文献阅读", "Sptatial Intelligence", "survey"]
 excerpt: "本文围绕视觉语言模型的空间智能展开综述，将相关任务划分为感知、理解和外推三个层级，并梳理了训练数据、评估基准、模型局限及主要增强方法。"
 render_with_liquid: false
 ---
@@ -14,6 +14,12 @@ render_with_liquid: false
 - **机构：**Case Western Reserve University、Northeastern University。
 - **期刊：**Artificial Intelligence Review，2026；官网显示 2026-08-11 发表，DOI：10.1007/s10462-026-11671-x。
 - **项目页面：**[Spatial intelligence in vision-language models](https://dishengll.github.io/Awesome-Spatial-VLMs/)
+
+> **阅读动机：** 借这篇综述入门空间推理（Spatial Reasoning），先了解视觉语言模型的空间推理任务、评测基准和常见方法。
+
+## 中文摘要
+
+本文综述视觉语言模型的空间智能，将相关任务划分为空间感知、空间理解和空间外推三个层级，梳理各层级的任务定义、训练数据与评测基准，并分析模型出现空间错误的原因。文章归纳了五类增强策略，包括提示设计、模型改进、引入显式二维线索、补充三维信息和数据驱动方法。作者还在 9 个代表性基准上比较了 37 个模型，发现不同增强策略的效果取决于任务和数据集，现有基准的设计也可能影响对模型空间能力的判断。
 
 ## 1. 文章结构
 

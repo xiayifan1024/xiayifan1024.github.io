@@ -75,7 +75,7 @@ html { scroll-behavior: auto !important; }
   #main > .archive, .wide #main > .page { padding-inline-end: 0; }
 }
 
-/* 技术博客固定正文字号，避免主题在大屏上放大至 22px。 */
+/* 文章固定正文字号，避免主题在大屏上放大至 22px。 */
 body.blog-reading { font-size: 17px; }
 .blog-reading .page__content { line-height: 1.75; overflow-wrap: break-word; }
 .blog-reading .page__title { font-size: 1.6em; line-height: 1.4; }

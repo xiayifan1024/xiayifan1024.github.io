@@ -1,4 +1,4 @@
-# 个人主页与技术博客
+# 个人主页与文章
 
 使用 Jekyll + Minimal Mistakes，英文简历为默认首页。电脑端使用左侧导航，最近博客和文章标签可以点击展开；页面右上角切换中英文简历。全站关闭动画和过渡。
 
@@ -7,7 +7,7 @@
 - `_pages/resume-en.md`：英文简历，地址 `/`。
 - `_pages/resume.md`：中文简历，地址 `/zh/`。
 - `_posts/`：Markdown 文章，命名为 `YYYY-MM-DD-title.md`。
-- `_pages/blog.html`：技术博客列表，地址 `/blog/`。
+- `_pages/blog.html`：文章列表，地址 `/blog/`。
 - `_pages/tags.html`：标签归档，地址 `/tags/`，标签从文章自动生成。
 - `_data/navigation.yml`：中英文导航。
 - `_data/site-text.yml`：中英文界面文字。
